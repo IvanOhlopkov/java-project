@@ -4,9 +4,15 @@ import java.util.Scanner;
  * класс Task1 позволяет провести операцию для двух чисел. сумма выводится с 4-мя знаками после запятой
  * @author Ivan Ohlopkov
  * */
-public class Task1 {
+public class Task1 extends Vvod{ //наследование
     public static void main( String[] args ){
-       /*создаем объект класса Scanner,
+        Task1 obj = new Task1();
+        obj.in();
+    }
+}
+class Vvod{
+    void in(){
+        /*создаем объект класса Scanner,
         объявляем переменные а,b,sum с типом double и присваиваем метод nextDouble для считывания ввода
          */
         Scanner scanner = new Scanner(System.in);
@@ -17,14 +23,14 @@ public class Task1 {
         System.out.println("Введите второе число: ");
         double b = scanner.nextDouble();
         scanner.close();
-    Calc calc = new Calc();
-    System.out.printf("Результат операции равен %.4f: ", calc.calculation(a,op,b));
+        Calc obj = new Calc();
+        System.out.printf("Результат операции равен %.4f: ", obj.calculation(a,op,b));
     }
 }
 class Calc{
-    public double calculation(double a, String op, double b){
+        protected double calculation(double a, String op, double b){ //инкапсуляция
         double sum = 0;
-        if(op.equals("+") )
+        if(op.equals("+") ) //полиморфизм
             sum = a + b;
         else if(op.equals("-"))
             sum = a - b;
