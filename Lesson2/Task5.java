@@ -1,10 +1,11 @@
+package Lesson2;
 import java.util.Scanner;
-/**класс KorzinaSladosti позволяет сформировать заказ на сладости среди 3 наименований
+/**класс Task5 позволяет сформировать заказ на сладости среди 3 наименований
  * если в заказе было выбрано одно из наименований, то выводятся его параметры
  * считает общий вес заказа и сумму заказа. выводит на консоль
  * @author Ivan Ohlopkov
  */
-public class KorzinaSladosti {
+public class Task5 {
     public static void main(String[]args){
         int sumW = 0;
         int sumP = 0;
@@ -21,7 +22,7 @@ public class KorzinaSladosti {
         после ввода строки, преобразовываем ее в массив. в цикле каждое значение в строке проверяется
         на одно из наименований и присвоение его параметров
          */
-        System.out.println("Выберите сладости: 1-Candy, 2-Jellybean, 3-Chocolate");
+        System.out.println("Выберите сладости: 1-Candy (цена 10р), 2-Jellybean (цена 20р), 3-Chocolate (цена 30р)");
         Scanner inPos = new Scanner(System.in);
         String pos = inPos.next();
         String[] arr1 = pos.split("");
