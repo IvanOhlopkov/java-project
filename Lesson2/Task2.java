@@ -43,7 +43,7 @@ public class Task2 {
         switch (c) {
             case 1: System.out.println("Несколько слов, или все слова с равной длиной");
                 break;
-            case 0: System.out.println("Максимальное слово это - " + arr1[b] + ". Длина слова составляет: " + max + " букв.");
+            case 0: System.out.println("Максимальное слово это - " + arr1[b] + ". Количество букв в слове: " + max);
                 break;
         }
     }
