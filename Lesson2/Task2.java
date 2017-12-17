@@ -1,11 +1,11 @@
+package Lesson2;
 import java.util.Scanner;
-
 /**
- * класс massiv позволяет указать длину массива из слов и сами слова
+ * класс Task2 позволяет указать длину массива из слов и сами слова
  * выводит в консоль слово с максимальной длиной
  * @author Ivan Ohlopkov
  */
-public class massiv {
+public class Task2 {
     public static void intext() {
         //объявляем массив слов arr1, длину массива i
         String[] arr1;
@@ -43,7 +43,7 @@ public class massiv {
         switch (c) {
             case 1: System.out.println("Несколько слов, или все слова с равной длиной");
                 break;
-            case 0: System.out.println("Максимальное слово это - " + arr1[b] + ". Длина слова составляет: " + max + "букв.");
+            case 0: System.out.println("Максимальное слово это - " + arr1[b] + ". Длина слова составляет: " + max + " букв.");
                 break;
         }
     }
