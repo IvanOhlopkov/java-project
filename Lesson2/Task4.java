@@ -1,10 +1,11 @@
+package Lesson2;
 import java.util.Arrays;
 import java.util.Random;
-/** класс MassivRand генерирует массив случайных чисел от -10 до 10, потом меняет их местами
+/** класс Task4 генерирует массив случайных чисел от -10 до 10, потом меняет их местами
  * и выводит результат на консоль
  * @author Ivan Ohlopkov
  */
-public class MassivRand {
+public class Task4 {
     public static void main(String[] args){
         System.out.print("Массив случайных чисел от -10 до 10: ");
         int[] arr1;
@@ -45,11 +46,12 @@ public class MassivRand {
         в цикле находятся макс. значения и меняются на минимальные c, и наоборот с использованием d
          */
         int d = arr1[b];
+        int f = arr1[c];
         for(int a = 0; a < arr1.length; a++){
-            if (maxPlus == arr1[a]){
-                arr1[a] = arr1[c];
+            if ( arr1[a] == maxPlus ){
+                arr1[a] = f;
             }
-            else if (maxMinus == arr1[a]){
+            else if ( arr1[a] == maxMinus ){
                 arr1[a] = d;
             }
         }
