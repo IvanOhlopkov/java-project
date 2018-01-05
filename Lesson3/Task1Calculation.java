@@ -1,7 +1,7 @@
 package Lesson3;
 /**
  * класс Task1Calculation содержит методы Task1Calculation - выполняет ввод чисел и операций
- * calculate проводит вычисление в зависимости выбранной операции
+ * calculate - проводит вычисление в зависимости выбранной операции
  * @author Ivan Ohlopkov
  */
 import java.util.Scanner;
