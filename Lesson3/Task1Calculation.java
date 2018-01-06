@@ -6,7 +6,7 @@ package Lesson3;
  */
 import java.util.Scanner;
 public class Task1Calculation {
-    void inputNumberAndOperation(){
+    void inputNumberAndOperation() {
         /*создаем объект класса Scanner,
         объявляем переменные а,b,sum с типом double и присваиваем метод nextDouble для считывания ввода
          */
@@ -18,18 +18,26 @@ public class Task1Calculation {
         System.out.println("Введите второе число: ");
         double b = scanner.nextDouble();
         scanner.close();
-        System.out.printf("Результат операции равен %.4f: ", calculate(a,op,b));
+        System.out.printf("Результат операции равен %.4f: ", calculate(a, op, b));
     }
+
     //метод calculate проводит вычисление в зависимости от выбранной операции
-    protected double calculate(double a, String op, double b){
+    protected double calculate(double a, String op, double b) throws ArithmeticException {
         double sum = 0;
-        if(op.equals("+") ) //полиморфизм
+        if (op.equals("+"))
             sum = a + b;
-        else if(op.equals("-"))
+        else if (op.equals("-"))
             sum = a - b;
-        else if (op.equals("/"))
-            sum = a / b;
-        else if (op.equals("*"))
+        else if (op.equals("/")) {
+            try {
+                if (b == 0) throw new ArithmeticException();
+                else
+                    sum = a / b;
+            } catch (ArithmeticException e) {
+                System.out.println(e + " На ноль делить нельзя!");
+                System.exit(0);
+            }
+        } else if (op.equals("*"))
             sum = a * b;
         else
             System.out.println("Вы ввели не правильную операцию!");
